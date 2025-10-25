@@ -17,12 +17,14 @@ modules:
       - source: system
         destination: / # copies files/system/* (* means everything inside it) into your image's root folder /
 
-  - type: dnf
-    repos:
-      copr:
-        - lizardbyte/stable
+#  - type: dnf
+#    repos:
+#      copr:
+#        - lizardbyte/stable
 
   - type: rpm-ostree
+    repos:
+      - https://copr.fedorainfracloud.org/coprs/lizardbyte/stable/repo/fedora-%OS_VERSION%/lizardbyte-stable-fedora-%OS_VERSION%.repo
     install:
       - Sunshine
     remove:
