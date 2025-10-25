@@ -20,11 +20,10 @@ modules:
   - type: dnf
     repos:
       copr:
-        - atim/starship
+        - lizardbyte/stable
     install:
       packages:
-        - micro
-        - starship
+        - Sunshine
     remove:
       packages:
         # example: removing firefox (in favor of the flatpak)
@@ -35,11 +34,23 @@ modules:
   - type: default-flatpaks
     configurations:
       - notify: true # Send notification after install/uninstall is finished (true/false)
-        scope: system
-        # If no repo information is specified, Flathub will be used by default
-        install: # system flatpaks we want all users to have and not remove
-          - org.mozilla.firefox
-          - org.gnome.Loupe
       - scope: user # Also add Flathub user repo, but no user packages
+        install:
+          - org.srb2.SRB2
+          - io.github.srb2.rphys
+          - org.kartkrew.RingRacers
+          - io.github.dvlv.boxbuddyrs
+          - com.usebottles.bottles
+          - org.libretro.RetroArch
+          - org.keepassxc.KeePassXC
+          - io.mrarm.mcpelauncher
+          - org.inkscape.Inkscape
+          - org.kde.gwenview
+          - io.github.celluloid_player.Celluloid
+          - com.valvesoftware.Steam # unofficial, but sandboxed
+          - org.localsend.localsend_app
+          - org.libreoffice.LibreOffice
+          - org.luanti.luanti
+          - org.qbittorrent.qBittorrent
 
   - type: signing # this sets up the proper policy & signing files for signed images to work fully
