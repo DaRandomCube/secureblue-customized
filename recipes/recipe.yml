@@ -25,8 +25,10 @@ modules:
   - type: rpm-ostree
     repos:
       - https://copr.fedorainfracloud.org/coprs/lizardbyte/stable/repo/fedora-%OS_VERSION%/lizardbyte-stable-fedora-%OS_VERSION%.repo
+      - https://pkgs.tailscale.com/stable/fedora/tailscale.repo
     install:
       - Sunshine
+      - tailscale
         
   - type: default-flatpaks
     configurations:
@@ -49,5 +51,10 @@ modules:
           - org.libreoffice.LibreOffice
           - org.luanti.luanti
           - org.qbittorrent.qBittorrent
+
+  - type: systemd
+    system:
+      enabled:
+        - tailescaled.service
 
   - type: signing # this sets up the proper policy & signing files for signed images to work fully
