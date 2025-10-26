@@ -2,7 +2,7 @@
 
 See the [BlueBuild docs](https://blue-build.org/how-to/setup/) for quick setup instructions for setting up your own repository based on this template.
 
-After setup, it is recommended you update this README to describe your custom image.
+this is an experiment to play with bluebuild to build something based on secureblue kinoite, but is almost ready out of box for my case (apps preinstalled, and more to come)
 
 ## Installation
 
