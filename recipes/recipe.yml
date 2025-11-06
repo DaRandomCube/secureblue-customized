@@ -27,7 +27,6 @@ modules:
       - https://copr.fedorainfracloud.org/coprs/lizardbyte/stable/repo/fedora-%OS_VERSION%/lizardbyte-stable-fedora-%OS_VERSION%.repo
       - https://pkgs.tailscale.com/stable/fedora/tailscale.repo
     install:
-      - Sunshine
       - tailscale
         
   - type: default-flatpaks
