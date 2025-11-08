@@ -3,7 +3,7 @@
 # image will be published to ghcr.io/<user>/<name>
 name: secureblue-customized
 # description will be included in the image's metadata
-description: This is my personal OS image.
+description: secureblue but customized to my liking
 
 # the base image to build on top of (FROM) and the version tag to use
 base-image: ghcr.io/secureblue/kinoite-main-hardened
@@ -28,6 +28,7 @@ modules:
       - https://pkgs.tailscale.com/stable/fedora/tailscale.repo
     install:
       - tailscale
+      - ptyxis
         
   - type: default-flatpaks
     configurations:
