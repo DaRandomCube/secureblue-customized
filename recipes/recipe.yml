@@ -36,7 +36,7 @@ modules:
       - scope: user # Also add Flathub user repo, but no user packages
         install:
           - org.srb2.SRB2
-          - io.github.srb2.rphys
+          # - io.github.srb2.rphys //it makes the build fail for some reason
           - org.kartkrew.RingRacers
           - io.github.dvlv.boxbuddyrs
           - com.usebottles.bottles
